@@ -22,6 +22,9 @@ class MenuBarManager: NSObject, ObservableObject {
     private var timerView: TimerStatusBarView?
     private lazy var contextMenu: NSMenu = {
         let menu = NSMenu()
+        let showWelcome = NSMenuItem(title: "Show Welcome", action: #selector(showWelcomePanel), keyEquivalent: "w")
+        showWelcome.target = self
+        menu.addItem(showWelcome)
         let quitItem = NSMenuItem(title: "Exit", action: #selector(quitApp), keyEquivalent: "q")
         quitItem.target = self
         menu.addItem(quitItem)
@@ -219,6 +222,10 @@ class MenuBarManager: NSObject, ObservableObject {
     
     @objc private func quitApp() {
         NSApp.terminate(nil)
+    }
+    
+    @objc private func showWelcomePanel() {
+        NotificationCenter.default.post(name: ChronoApp.showOnboardingNotification, object: nil)
     }
 }
 

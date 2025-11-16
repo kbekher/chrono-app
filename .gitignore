@@ -2,4 +2,4 @@
 # macOS
 .DS_Store
 build/
-.deriveddata/
+.DerivedData/
