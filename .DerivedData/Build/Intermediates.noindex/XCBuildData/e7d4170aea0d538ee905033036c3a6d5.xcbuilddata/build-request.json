@@ -1,0 +1,64 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildOnly"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "e2aa47c7938f55c8bc5a172682890e550ba341d0eaf7fd3480039303598d5c10"
+    }
+  ],
+  "containerPath" : "/Users/k.bekher/Projects/Ivan/chrono-app/Chrono.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx14.5",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Products",
+      "derivedDataPath" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData",
+      "indexDataStoreFolderPath" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "NO",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

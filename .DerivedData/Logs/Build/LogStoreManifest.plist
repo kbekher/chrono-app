@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>11</integer>
+	<key>logs</key>
+	<dict>
+		<key>FF3375D3-B54D-4C1B-A2F8-43C18C53EB5F</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FF3375D3-B54D-4C1B-A2F8-43C18C53EB5F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>4</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Chrono project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Chrono</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project Chrono with scheme Chrono and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>784983369.30190098</real>
+			<key>timeStoppedRecording</key>
+			<real>784983382.84971905</real>
+			<key>title</key>
+			<string>Building project Chrono with scheme Chrono and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>FF3375D3-B54D-4C1B-A2F8-43C18C53EB5F</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

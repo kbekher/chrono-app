@@ -1,0 +1,24 @@
+{
+  "source": "/Users/k.bekher/Projects/Ivan/chrono-app/Chrono/TimerPopoverView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Chrono"
+      },
+      {
+        "comment": "",
+        "key": "Stop"
+      },
+      {
+        "comment": "",
+        "key": "Start"
+      },
+      {
+        "comment": "",
+        "key": "Reset"
+      }
+    ]
+  },
+  "version": 1
+}

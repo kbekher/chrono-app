@@ -1,0 +1,24 @@
+{
+  "source": "/Users/k.bekher/Projects/Ivan/chrono-app/Chrono/LiveActivityView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Session will pause after inactivity."
+      },
+      {
+        "comment": "",
+        "key": "Chrono"
+      },
+      {
+        "comment": "",
+        "key": "Timer Running"
+      },
+      {
+        "comment": "",
+        "key": "Timer Stopped"
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,12 @@
+{
+  "source": "/Users/k.bekher/Projects/Ivan/chrono-app/Chrono/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Hello, world!"
+      }
+    ]
+  },
+  "version": 1
+}

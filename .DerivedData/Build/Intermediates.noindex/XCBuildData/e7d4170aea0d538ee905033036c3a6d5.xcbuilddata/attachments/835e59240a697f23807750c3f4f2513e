@@ -1,0 +1,108 @@
+{
+  "" : {
+    "diagnostics" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/Chrono-master.dia",
+    "emit-module-dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/Chrono-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/Chrono-master-emit-module.dia",
+    "swift-dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/Chrono-master.swiftdeps"
+  },
+  "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/k.bekher/Projects/Ivan/chrono-app/Chrono/ActivityMonitor.swift" : {
+    "const-values" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ActivityMonitor.swiftconstvalues",
+    "dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ActivityMonitor.d",
+    "diagnostics" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ActivityMonitor.dia",
+    "index-unit-output-path" : "/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ActivityMonitor.o",
+    "llvm-bc" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ActivityMonitor.bc",
+    "object" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ActivityMonitor.o",
+    "swift-dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ActivityMonitor.swiftdeps",
+    "swiftmodule" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ActivityMonitor~partial.swiftmodule"
+  },
+  "/Users/k.bekher/Projects/Ivan/chrono-app/Chrono/ChronoApp.swift" : {
+    "const-values" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ChronoApp.swiftconstvalues",
+    "dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ChronoApp.d",
+    "diagnostics" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ChronoApp.dia",
+    "index-unit-output-path" : "/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ChronoApp.o",
+    "llvm-bc" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ChronoApp.bc",
+    "object" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ChronoApp.o",
+    "swift-dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ChronoApp.swiftdeps",
+    "swiftmodule" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ChronoApp~partial.swiftmodule"
+  },
+  "/Users/k.bekher/Projects/Ivan/chrono-app/Chrono/ContentView.swift" : {
+    "const-values" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/k.bekher/Projects/Ivan/chrono-app/Chrono/KeyboardShortcutManager.swift" : {
+    "const-values" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/KeyboardShortcutManager.swiftconstvalues",
+    "dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/KeyboardShortcutManager.d",
+    "diagnostics" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/KeyboardShortcutManager.dia",
+    "index-unit-output-path" : "/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/KeyboardShortcutManager.o",
+    "llvm-bc" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/KeyboardShortcutManager.bc",
+    "object" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/KeyboardShortcutManager.o",
+    "swift-dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/KeyboardShortcutManager.swiftdeps",
+    "swiftmodule" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/KeyboardShortcutManager~partial.swiftmodule"
+  },
+  "/Users/k.bekher/Projects/Ivan/chrono-app/Chrono/LiveActivityView.swift" : {
+    "const-values" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/LiveActivityView.swiftconstvalues",
+    "dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/LiveActivityView.d",
+    "diagnostics" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/LiveActivityView.dia",
+    "index-unit-output-path" : "/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/LiveActivityView.o",
+    "llvm-bc" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/LiveActivityView.bc",
+    "object" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/LiveActivityView.o",
+    "swift-dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/LiveActivityView.swiftdeps",
+    "swiftmodule" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/LiveActivityView~partial.swiftmodule"
+  },
+  "/Users/k.bekher/Projects/Ivan/chrono-app/Chrono/MenuBarManager.swift" : {
+    "const-values" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/MenuBarManager.swiftconstvalues",
+    "dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/MenuBarManager.d",
+    "diagnostics" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/MenuBarManager.dia",
+    "index-unit-output-path" : "/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/MenuBarManager.o",
+    "llvm-bc" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/MenuBarManager.bc",
+    "object" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/MenuBarManager.o",
+    "swift-dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/MenuBarManager.swiftdeps",
+    "swiftmodule" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/MenuBarManager~partial.swiftmodule"
+  },
+  "/Users/k.bekher/Projects/Ivan/chrono-app/Chrono/TimerPopoverView.swift" : {
+    "const-values" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerPopoverView.swiftconstvalues",
+    "dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerPopoverView.d",
+    "diagnostics" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerPopoverView.dia",
+    "index-unit-output-path" : "/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerPopoverView.o",
+    "llvm-bc" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerPopoverView.bc",
+    "object" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerPopoverView.o",
+    "swift-dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerPopoverView.swiftdeps",
+    "swiftmodule" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerPopoverView~partial.swiftmodule"
+  },
+  "/Users/k.bekher/Projects/Ivan/chrono-app/Chrono/TimerStatusBarView.swift" : {
+    "const-values" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerStatusBarView.swiftconstvalues",
+    "dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerStatusBarView.d",
+    "diagnostics" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerStatusBarView.dia",
+    "index-unit-output-path" : "/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerStatusBarView.o",
+    "llvm-bc" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerStatusBarView.bc",
+    "object" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerStatusBarView.o",
+    "swift-dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerStatusBarView.swiftdeps",
+    "swiftmodule" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerStatusBarView~partial.swiftmodule"
+  },
+  "/Users/k.bekher/Projects/Ivan/chrono-app/Chrono/TimerViewModel.swift" : {
+    "const-values" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerViewModel.swiftconstvalues",
+    "dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerViewModel.d",
+    "diagnostics" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerViewModel.dia",
+    "index-unit-output-path" : "/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerViewModel.o",
+    "llvm-bc" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerViewModel.bc",
+    "object" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerViewModel.o",
+    "swift-dependencies" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerViewModel.swiftdeps",
+    "swiftmodule" : "/Users/k.bekher/Projects/Ivan/chrono-app/.DerivedData/Build/Intermediates.noindex/Chrono.build/Debug/Chrono.build/Objects-normal/arm64/TimerViewModel~partial.swiftmodule"
+  }
+}
