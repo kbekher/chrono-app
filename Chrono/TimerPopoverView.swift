@@ -68,7 +68,7 @@ struct TimerPopoverView: View {
             }
             .frame(maxWidth: .infinity) // no fixed container width
         }
-        .frame(width: 331) // height auto with spacings
+        .frame(width: 300) // height auto with spacings
         .padding(.horizontal, 16)
         .padding(.top, 8)
         .padding(.bottom, 16)
