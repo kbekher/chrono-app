@@ -13,18 +13,16 @@ import Combine
 @MainActor
 class MenuBarManager: NSObject, ObservableObject {
     private var statusBarItem: NSStatusItem?
-    private var popover: NSPopover?
+    private var customPopoverWindow: NSPanel?
+    private var globalEventMonitor: Any?
     private let viewModel: TimerViewModel
     private let activityMonitor: ActivityMonitor
     private let keyboardShortcutManager: KeyboardShortcutManager
     private var updateTimer: Timer?
     private var cancellables = Set<AnyCancellable>()
-    private var timerView: TimerStatusBarView?
+    private var hostingView: NSHostingView<AnyView>?
     private lazy var contextMenu: NSMenu = {
         let menu = NSMenu()
-        let showWelcome = NSMenuItem(title: "Show Welcome", action: #selector(showWelcomePanel), keyEquivalent: "w")
-        showWelcome.target = self
-        menu.addItem(showWelcome)
         let quitItem = NSMenuItem(title: "Exit", action: #selector(quitApp), keyEquivalent: "q")
         quitItem.target = self
         menu.addItem(quitItem)
@@ -48,35 +46,22 @@ class MenuBarManager: NSObject, ObservableObject {
         viewModel.$elapsed
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
-                self?.updateMenuBarText()
                 self?.resizeStatusItemToFitText()
             }
             .store(in: &cancellables)
-    }
-    
-    private func updateMenuBarText() {
-        let timeString = viewModel.formattedTime()
-        if let button = statusBarItem?.button {
-            let image = renderStatusImage(for: timeString)
-            button.image = image
-            button.imagePosition = .imageOnly
-            button.title = ""
-        } else if let timerView = timerView {
-            timerView.updateTime(timeString)
-        }
     }
     
     private func resizeStatusItemToFitText() {
         guard let button = statusBarItem?.button else { return }
         let timeString = viewModel.formattedTime()
         
-        // Measure text width roughly like the custom view does (13pt SF, tabular)
-        let font = NSFont.systemFont(ofSize: 13, weight: .regular)
+        // Measure text width for system font 13pt monospaced digit
+        let font = NSFont.monospacedDigitSystemFont(ofSize: 13, weight: .medium)
         let attributes: [NSAttributedString.Key: Any] = [.font: font]
         let width = (timeString as NSString).size(withAttributes: attributes).width
         
-        // Add horizontal padding and a little slack
-        let targetWidth = max(72, ceil(width + 16))
+        // Add horizontal padding (8 on each side = 16)
+        let targetWidth = ceil(width + 16)
         statusBarItem?.length = targetWidth
         button.setFrameSize(NSSize(width: targetWidth, height: button.frame.height))
     }
@@ -91,10 +76,6 @@ class MenuBarManager: NSObject, ObservableObject {
             
             // Set up button
             if let button = self.statusBarItem?.button {
-                let timeString = self.viewModel.formattedTime()
-                let image = self.renderStatusImage(for: timeString)
-                button.image = image
-                button.imagePosition = .imageOnly
                 button.title = ""
                 button.image = nil
                 button.imagePosition = .noImage
@@ -104,27 +85,75 @@ class MenuBarManager: NSObject, ObservableObject {
                 // Set up click handler
                 button.action = #selector(self.togglePopover)
                 button.target = self
+                
+                let view = TimerStatusBarView(viewModel: self.viewModel).allowsHitTesting(false)
+                let hostingView = NSHostingView(rootView: AnyView(view))
+                hostingView.translatesAutoresizingMaskIntoConstraints = false
+                button.addSubview(hostingView)
+                
+                NSLayoutConstraint.activate([
+                    hostingView.centerXAnchor.constraint(equalTo: button.centerXAnchor),
+                    hostingView.centerYAnchor.constraint(equalTo: button.centerYAnchor)
+                ])
+                self.hostingView = hostingView
             }
             
-            // Initial display
-            self.updateMenuBarText()
+            // Initial map size setup
+            self.resizeStatusItemToFitText()
             
-            // Create popover
-            self.popover = NSPopover()
-            self.popover?.contentSize = NSSize(width: 331, height: 129)
-            self.popover?.behavior = .transient
-            self.popover?.delegate = self
-            // Hide the popover's arrow (anchor)
-            self.popover?.setValue(true, forKey: "shouldHideAnchor")
-            self.popover?.contentViewController = NSHostingController(rootView: TimerPopoverView(viewModel: self.viewModel))
+            // Create custom borderless panel
+            let panel = NSPanel(
+                contentRect: NSRect(x: 0, y: 0, width: 360, height: 160),
+                styleMask: [.nonactivatingPanel, .fullSizeContentView, .borderless],
+                backing: .buffered,
+                defer: false
+            )
+            panel.isFloatingPanel = true
+            panel.level = .popUpMenu
+            panel.backgroundColor = .clear
+            panel.isOpaque = false
+            panel.hasShadow = true
+            panel.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
+            panel.contentView = NSHostingView(rootView: TimerPopoverView(viewModel: self.viewModel, onSizeChange: { [weak panel, weak self] newSize in
+                guard let panel = panel, let self = self, let button = self.statusBarItem?.button, let window = button.window else { return }
+                
+                let targetWidth: CGFloat = 360
+                let targetHeight = newSize.height
+                
+                let buttonRect = button.convert(button.bounds, to: nil)
+                let screenRect = window.convertToScreen(buttonRect)
+                
+                let x = screenRect.midX - (targetWidth / 2)
+                let y = screenRect.minY - targetHeight - 8
+                
+                let newFrame = NSRect(x: x, y: y, width: targetWidth, height: targetHeight)
+                
+                if panel.isVisible && abs(panel.frame.height - targetHeight) > 1 {
+                    NSAnimationContext.runAnimationGroup { context in
+                        context.duration = 0.25
+                        context.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+                        panel.animator().setFrame(newFrame, display: true)
+                    }
+                } else if !panel.isVisible {
+                    panel.setFrame(newFrame, display: false)
+                }
+            }))
+            self.customPopoverWindow = panel
             
-            // Auto-open the popover once on first launch so the user sees the window
+            // Auto-open the popover once on first launch
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { [weak self] in
-                guard let self = self,
-                      let button = self.statusBarItem?.button,
-                      let pop = self.popover else { return }
-                if !pop.isShown {
-                    pop.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
+                guard let self = self, let panel = self.customPopoverWindow else { return }
+                if !panel.isVisible {
+                    self.showCustomPopover()
+                }
+            }
+            
+            // Add global tap monitor to dismiss the custom window
+            self.globalEventMonitor = NSEvent.addGlobalMonitorForEvents(matching: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
+                guard let self = self, let panel = self.customPopoverWindow else { return }
+                if panel.isVisible {
+                    panel.orderOut(nil)
+                    NotificationCenter.default.post(name: NSNotification.Name("PopoverDidClose"), object: nil)
                 }
             }
             
@@ -189,16 +218,37 @@ class MenuBarManager: NSObject, ObservableObject {
     @objc private func togglePopover() {
         guard let button = statusBarItem?.button else { return }
         if let event = NSApp.currentEvent, event.type == .rightMouseUp {
-            // Show context menu on right-click
             NSMenu.popUpContextMenu(contextMenu, with: event, for: button)
             return
         }
-        guard let pop = popover else { return }
-        if pop.isShown {
-            pop.performClose(nil)
+        guard let panel = customPopoverWindow else { return }
+        
+        if panel.isVisible {
+            panel.orderOut(nil)
+            NotificationCenter.default.post(name: NSNotification.Name("PopoverDidClose"), object: nil)
         } else {
-            pop.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
+            showCustomPopover()
         }
+    }
+    
+    private func showCustomPopover() {
+        guard let button = statusBarItem?.button, let panel = customPopoverWindow, let window = button.window else { return }
+        
+        let buttonRect = button.convert(button.bounds, to: nil)
+        let screenRect = window.convertToScreen(buttonRect)
+        
+        let targetWidth: CGFloat = 360
+        let targetHeight = panel.contentView?.fittingSize.height ?? panel.frame.height
+        if panel.frame.size != NSSize(width: targetWidth, height: targetHeight) {
+            panel.setContentSize(NSSize(width: targetWidth, height: targetHeight))
+        }
+        
+        let x = screenRect.midX - (targetWidth / 2)
+        let y = screenRect.minY - targetHeight - 8 // 8pt padding from menu bar
+        
+        panel.setFrameOrigin(NSPoint(x: x, y: y))
+        panel.makeKeyAndOrderFront(nil)
+        NSApp.activate(ignoringOtherApps: true)
     }
     
     private func sendNotification() {
@@ -218,28 +268,22 @@ class MenuBarManager: NSObject, ObservableObject {
         cancellables.removeAll()
         activityMonitor.stopMonitoring()
         keyboardShortcutManager.unregisterShortcuts()
+        if let monitor = globalEventMonitor {
+            NSEvent.removeMonitor(monitor)
+        }
     }
     
     @objc private func quitApp() {
         NSApp.terminate(nil)
     }
-    
-    @objc private func showWelcomePanel() {
-        NotificationCenter.default.post(name: ChronoApp.showOnboardingNotification, object: nil)
-    }
 }
 
-extension MenuBarManager: NSPopoverDelegate {
-    func popoverShouldClose(_ popover: NSPopover) -> Bool {
-        return true
-    }
-}
 
 // MARK: - Fallback window
 extension MenuBarManager {
     private func presentCenteredFallbackWindow() {
         let panel = NSPanel(
-            contentRect: NSRect(x: 0, y: 0, width: 340, height: 160),
+            contentRect: NSRect(x: 0, y: 0, width: 360, height: 160),
             styleMask: [.titled, .fullSizeContentView, .nonactivatingPanel],
             backing: .buffered,
             defer: false
@@ -273,44 +317,3 @@ extension MenuBarManager {
     }
 }
 
-// MARK: - Status item image rendering
-extension MenuBarManager {
-    private func renderStatusImage(for text: String) -> NSImage {
-        let font = NSFont.monospacedDigitSystemFont(ofSize: 13, weight: .regular)
-        let attributes: [NSAttributedString.Key: Any] = [
-            .font: font,
-            .foregroundColor: NSColor.white
-        ]
-        let attributed = NSAttributedString(string: text, attributes: attributes)
-        let textSize = attributed.size()
-        let horizontalPadding: CGFloat = 10
-        let verticalPadding: CGFloat = 3
-        let width = ceil(textSize.width + horizontalPadding * 2)
-        let height = ceil(textSize.height + verticalPadding * 2)
-        let size = NSSize(width: max(36, width), height: max(18, height))
-        
-        let image = NSImage(size: size)
-        image.lockFocus()
-        
-        // Gray pill background (#767680 @ 60%)
-        let bgColor = NSColor(calibratedRed: 0x76/255.0, green: 0x76/255.0, blue: 0x80/255.0, alpha: 0.60)
-        let rect = NSRect(origin: .zero, size: size)
-        let radius = size.height / 2
-        let path = NSBezierPath(roundedRect: rect, xRadius: radius, yRadius: radius)
-        bgColor.setFill()
-        path.fill()
-        
-        // Draw centered text in white
-        let textRect = NSRect(
-            x: (size.width - textSize.width) / 2.0,
-            y: (size.height - textSize.height) / 2.0 - 0.5,
-            width: textSize.width,
-            height: textSize.height
-        )
-        attributed.draw(in: textRect)
-        
-        image.unlockFocus()
-        image.isTemplate = false
-        return image
-    }
-}

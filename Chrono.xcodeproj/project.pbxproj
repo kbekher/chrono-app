@@ -16,7 +16,6 @@
 		A1F001262F00000100000001 /* TimerPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F001162F00000100000001 /* TimerPopoverView.swift */; };
 		A1F001272F00000100000001 /* TimerStatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F001172F00000100000001 /* TimerStatusBarView.swift */; };
 		A1F001282F00000100000001 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F001182F00000100000001 /* TimerViewModel.swift */; };
-		A1F0012A2F00000100000001 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F0011A2F00000100000001 /* OnboardingView.swift */; };
 		A1F001292F00000100000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F001192F00000100000001 /* Assets.xcassets */; };
 		A1F0012C2F00000100000001 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = A1F0012B2F00000100000001 /* assets */; };
 /* End PBXBuildFile section */
@@ -32,7 +31,6 @@
 		A1F001162F00000100000001 /* TimerPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPopoverView.swift; sourceTree = "<group>"; };
 		A1F001172F00000100000001 /* TimerStatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStatusBarView.swift; sourceTree = "<group>"; };
 		A1F001182F00000100000001 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
-		A1F0011A2F00000100000001 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A1F001192F00000100000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1F0012B2F00000100000001 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +74,6 @@
 				A1F001162F00000100000001 /* TimerPopoverView.swift */,
 				A1F001172F00000100000001 /* TimerStatusBarView.swift */,
 				A1F001182F00000100000001 /* TimerViewModel.swift */,
-				A1F0011A2F00000100000001 /* OnboardingView.swift */,
 				A1F001192F00000100000001 /* Assets.xcassets */,
 				A1F0012B2F00000100000001 /* assets */,
 			);
@@ -164,7 +161,6 @@
 				A1F001252F00000100000001 /* MenuBarManager.swift in Sources */,
 				A1F001262F00000100000001 /* TimerPopoverView.swift in Sources */,
 				A1F001272F00000100000001 /* TimerStatusBarView.swift in Sources */,
-				A1F0012A2F00000100000001 /* OnboardingView.swift in Sources */,
 				A1F001282F00000100000001 /* TimerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
