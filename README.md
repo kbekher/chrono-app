@@ -1,4 +1,4 @@
-## Chrono
+## Chrono v1.0.0 (First Release)
 
 A lightweight, highly polished macOS menu bar timer meticulously tailored to the macOS 26 design language (Prominent Floating Elements).
 
