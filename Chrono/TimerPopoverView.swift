@@ -226,7 +226,7 @@ struct HoverButton: View {
                 .padding(.vertical, 14)
                 .background(
                     RoundedRectangle(cornerRadius: cornerRadius)
-                        .fill(Color(red: 0x5e/255.0, green: 0x5e/255.0, blue: 0x5e/255.0).opacity(isHovered ? 0.35 : 0.18))
+                        .fill(Color.white.opacity(isHovered ? 0.50 : 0.30))
                 )
                 .contentShape(RoundedRectangle(cornerRadius: cornerRadius))
         }

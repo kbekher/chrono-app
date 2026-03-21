@@ -183,7 +183,6 @@ class MenuBarManager: NSObject, ObservableObject {
     private func setupActivityMonitor() {
         activityMonitor.onInactivityDetected = { [weak self] in
             guard let self = self else { return }
-            
             if self.viewModel.isRunning {
                 self.viewModel.stop()
                 self.sendNotification()
@@ -252,7 +251,7 @@ class MenuBarManager: NSObject, ObservableObject {
     }
     
     private func sendNotification() {
-        let notification = UNUserNotificationCenter.current()
+        let center = UNUserNotificationCenter.current()
         
         let content = UNMutableNotificationContent()
         content.title = "Chrono paused"
@@ -260,7 +259,18 @@ class MenuBarManager: NSObject, ObservableObject {
         content.sound = .default
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
-        notification.add(request)
+        center.add(request) { error in
+            if let error = error {
+                
+                // FALLBACK: Legacy NSUserNotification
+                let legacyNotification = NSUserNotification()
+                legacyNotification.title = "Chrono paused"
+                legacyNotification.informativeText = "No activity detected for 5 minutes."
+                legacyNotification.soundName = NSUserNotificationDefaultSoundName
+                NSUserNotificationCenter.default.deliver(legacyNotification)
+            } else {
+            }
+        }
     }
     
     deinit {

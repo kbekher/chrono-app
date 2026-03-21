@@ -21,12 +21,16 @@ struct ChronoApp: App {
     }
 }
 
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate, NSUserNotificationCenterDelegate {
     private var menuBarManager: MenuBarManager?
     private var viewModel: TimerViewModel?
     private var cancellables: Set<AnyCancellable> = []
     
     func applicationDidFinishLaunching(_ notification: Notification) {
+        // Set delegates
+        UNUserNotificationCenter.current().delegate = self
+        NSUserNotificationCenter.default.delegate = self
+        
 		// Hide dock icon while running (app will still appear in Launchpad if installed in /Applications)
         NSApp.setActivationPolicy(.accessory)
         
@@ -48,6 +52,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Then setup (which is now async)
         mbm.setup()
     }
+    
+    // Show notifications even when the app is in the foreground
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // Use all available methods for visibility: banner, sidebar list, and system sound
+        completionHandler([.banner, .list, .sound])
+    }
+    
+    // Legacy fallback for foreground presentation
+    func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
+        return true
+    }
+
     
     func applicationWillTerminate(_ notification: Notification) {
         menuBarManager = nil
