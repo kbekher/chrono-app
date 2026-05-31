@@ -3,7 +3,6 @@
 Chrono is your minimalist and lightweight macOS menu bar timer built for tracking time and staying focused. It’s designed to stay out of your way while you work — with a clean interface, quick access via hotkeys, and a subtle always-on-top presence that makes time tracking feel effortless.
 
 **Current version:** 1.0.1
-**Bundle ID:** `com.bekher.Chrono`
 
 ## Preview
 
