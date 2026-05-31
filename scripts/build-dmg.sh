@@ -10,15 +10,15 @@
 #   bash scripts/build-dmg.sh
 #
 # Output:
-#   dist/Chrono-1.0.dmg
+#   dist/Chrono-1.0.1.dmg
 # =============================================================================
 
 set -euo pipefail
 
 # ── Configuration ──────────────────────────────────────────────────────────────
 APP_NAME="Chrono"
-VERSION="1.0"
-BUILD_NUMBER="1"
+VERSION="1.0.1"
+BUILD_NUMBER="2"
 DMG_NAME="${APP_NAME}-${VERSION}"
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
