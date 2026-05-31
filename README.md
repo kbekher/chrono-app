@@ -8,9 +8,9 @@ A lightweight macOS menu bar timer built for the macOS 26 design language — li
 ## Preview
 
 <p align="center">
-  <img src="https://tojp4f5baeta7girwrpqvogul40oddhk.lambda-url.eu-central-1.on.aws/img/in-next-app/chrono-01.jpg?w=3840&q=75&f=webp" alt="Chrono app icon" width="180" />
+  <img src="https://tojp4f5baeta7girwrpqvogul40oddhk.lambda-url.eu-central-1.on.aws/img/in-next-app/chrono-01.jpg?w=3840&q=75&f=webp" alt="Chrono app icon" width="360" />
   &nbsp;&nbsp;
-  <img src="https://tojp4f5baeta7girwrpqvogul40oddhk.lambda-url.eu-central-1.on.aws/img/in-next-app/chrono-02.jpg?w=3840&q=75&f=webp" alt="Chrono menu bar pill and floating timer panel" width="640" />
+  <img src="https://tojp4f5baeta7girwrpqvogul40oddhk.lambda-url.eu-central-1.on.aws/img/in-next-app/chrono-02.jpg?w=3840&q=75&f=webp" alt="Chrono menu bar pill and floating timer panel" width="360" />
 </p>
 
 <p align="center"><em>App icon · Menu bar timer with liquid glass floating panel</em></p>
